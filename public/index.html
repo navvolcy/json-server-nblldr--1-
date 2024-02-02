@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Student Logs</title>
+    <meta charset="utf8" />
+    <link
+      rel="icon"
+      href="./O6JyqIFv.ico"
+      type="image/x-icon"
+      />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <form id="form1">
+          <div>
+      <img src="uvu_image.png">
+    </div>
+    <div id="navlist">
+      <button type="button" data-theme-toggle  aria-label=" light"></button>
+    </div>
+    <div id="upperHalf"> 
+    <select
+      aria-label="Select Course"
+      id="course"
+      name="course"
+      data-cy="course_select"
+    >
+      <option selected value="" id="empty">Choose Courses</option>
+      </select
+    ><br />
+
+    <div id="studentID" style="display:none">
+    <label for="uvuId">UVU ID</label><br />
+    
+   
+    <input type="text" id="uvuId" name="uvuId" data-cy="uvuId_input"  placeholder="12345678" maxlength="8"
+    onkeypress="return(event.charCode !=8 && event.charCode == 0 || (event.charCode >= 48 && event.charCode <= 57))"/>
+    </div>
+    </div>
+     
+    
+    <div id="lowerHalf">
+      <h3 id="uvuIdDisplay" data-cy="uvuIdDisplay">
+       
+      </h3>
+      <ul data-cy="logs" id="unOrdered">
+       
+      </ul>
+      <label>New Log</label><br />
+      <textarea
+        style="height: 75px"
+        aria-label="add log textarea"
+        data-cy="log_textarea"
+        id="text"
+        style="position: relative;"
+      ></textarea
+      ><br />
+     
+      <button type="submit" data-cy="add_log_btn" id="button">Add Log</button>
+      
+    </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+  
+</html>
+
+<!-- TODO: move all TODOs that done above to down below here and change the label to DONE:. -->
+<!-- DONE: set the lang attribute to American English -->
+<!-- DONE: set the characterset to utf8 -->
+<!-- DONE: temporarily use stackoverflow's favicon. "https://cdn.sstatic.net/Sites/stackoverflow/Img/favicon.ico"-->
+ <!-- DONE: write `10234567` as sample data on the input field below  -->
+  <!-- DONE: Ensure the character length never exceeds 8 -->
+  <!-- DONE: Don't show the uvu id text input box until a course was selected above. -->
+  <!-- DONE: Only numbers, no letters or other characters-->
+   <!--DONE: Don't show the uvu id text input box until a course was selected above. -->
+  <!--DONE: If course ever becomes unselected, don't show the uvu id text input box.-->
+  <!-- DONE: The following options are currently static values to show you an example.  -->
+  <!-- DONE: Load the JS file -->
+   <!-- DONE: The following options are currently static values to show you sample data.  -->
+      <!-- AJAX to replace them with dynamic data from GET https://json-server-ft3qa5--3000.local.webcontainer.io/api/v1/courses -->
+      <!-- NOTE: all AJAX in this project is via fetch-->
+      <!-- Use your own unique URL you recorded, not the sample one above. -->
+  <!-- You must replace them with dynamic data by ajaxing GET https://json-server-ft3qa5--3000.local.webcontainer.io/logs?courseId=<courseID>&uvuId=<uvuID> -->
+  <!-- DONE: When character length reaches 8 and it's only digits, fire off ajax request, if 200 or 304, display results, else appropriately guide the user. -->
+  <!-- DONE: Click anywhere on the log to toggle visibility of the log (text only, not the date) -->
+  <!-- DONE: Button should be disabled until the logs, if any, are displayed and there's text in the textarea -->
+   <!-- DONE: add appropriate comments you feel are necessary, if any, for the next coder to understand -->
+   <!-- DONE: add appropriate comments you feel are necessary, if any, for the next coder to understand -->
+<!-- DONE: Load the CSS file -->
